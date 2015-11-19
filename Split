@@ -1,0 +1,18 @@
+#the function split
+
+def split (sign = " ", sentence = "Doctor Who is a British science-fiction television programme produced by the BBC from 1963 to the present day."):
+    i = 0
+    table = []
+    word = ""
+    while i < sentence.__len__():
+        if sentence[i] == sign:
+            table.append(word)
+            i += 1
+            word = ""
+            continue
+        else:
+            word += sentence[i]
+        i += 1
+    table.append(word)
+    return table
+print(split())
