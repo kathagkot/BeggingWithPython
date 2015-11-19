@@ -1,0 +1,37 @@
+import math
+
+def Intersection(A, B):
+    print(A & B)
+def Union(A, B):
+    print(A | B)
+def Difference(A, B):
+    print(A - B)
+def Symetric_Difference(A, B):
+    print(A ^ B)
+SetCalc = {
+    1: Intersection,
+    2: Union,
+    3: Difference,
+    4: Symetric_Difference
+}
+
+Selection = 0
+while (Selection != 4):
+    print("")
+    print("Set A:")
+    A = {1, 3, 6, 12, 24}
+    print(A)
+    print("Set B:")
+    B = {1, 6, 28, 54, -3}
+    print(B)
+    print("1. Intersection")
+    print("2. Union")
+    print("3. Difference A - B")
+    print("4. Symetric_Difference")
+
+    try:
+        Selection = int(input("Wybierz funkcje: "))
+        SetCalc[Selection](A, B)
+    except:
+        print("Wprowadzono nieprawidlowa wartosc")
+        print("Czy wpisales liczbe z zakresu 1 - 4?")
