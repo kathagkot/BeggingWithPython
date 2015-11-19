@@ -1,0 +1,12 @@
+
+def place (letter = "h", sentence = 'nabuchodonosor'):
+    i = 0
+    table = []
+    while i < sentence.__len__():
+        if letter == sentence[i]:
+            table.append(i)
+        i += 1
+    if table.__len__() == 0:
+        return None
+    return table
+print(place())
