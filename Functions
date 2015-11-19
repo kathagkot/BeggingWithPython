@@ -1,0 +1,36 @@
+import math
+
+def Sinus(x):
+    print(math.sin(x))
+
+def Cosinus(x):
+    print(math.cos(x))
+
+def Szescian(x):
+    print(x**3)
+
+def Pierwiastek(x):
+    print(math.sqrt(x))
+
+Calculations = {
+    1: Sinus,
+    2: Cosinus,
+    3: Szescian,
+    4: Pierwiastek
+}
+
+
+Selection = 0
+
+while (Selection != 5):
+    liczba = int(input("Wprowadz liczbe: "))
+    print("1. Sinus")
+    print("2. Cosinus")
+    print("3. Szescian")
+    print("4. Pierwiastek")
+    print("5. Koniec")
+
+    Selection = int(input("Wybierz funkcje: "))
+
+    if (Selection >= 1) and (Selection < 5):
+        Calculations[Selection](liczba)
