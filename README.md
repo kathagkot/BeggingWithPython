@@ -1,2 +1,2 @@
-# BeggingWithPython
-First steps into world of programming using Python
+## BeggingWithPython
+First steps into the world of programming using Python
